@@ -37,12 +37,25 @@
                                     <rect key="frame" x="164" y="372" width="74" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNH-aC-PTV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="stop"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="176" y="472" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keU-K1-QPB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NiP-SD-4zF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ktr-8p-ToX"/>
                             <constraint firstItem="NiP-SD-4zF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QDT-8L-Xx6"/>
+                            <constraint firstItem="PNH-aC-PTV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zcv-wX-Rye"/>
+                            <constraint firstItem="PNH-aC-PTV" firstAttribute="top" secondItem="NiP-SD-4zF" secondAttribute="bottom" constant="122" id="aZ8-vo-l10"/>
                             <constraint firstItem="P2S-Dh-Ker" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ec3-Gl-XrY"/>
                             <constraint firstItem="P2S-Dh-Ker" firstAttribute="top" secondItem="NiP-SD-4zF" secondAttribute="bottom" constant="22" id="lZM-J1-Cq6"/>
                         </constraints>
@@ -50,27 +63,36 @@
                             <mask key="subviews">
                                 <exclude reference="NiP-SD-4zF"/>
                                 <exclude reference="P2S-Dh-Ker"/>
+                                <exclude reference="PNH-aC-PTV"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Ktr-8p-ToX"/>
                                 <exclude reference="QDT-8L-Xx6"/>
                                 <exclude reference="ec3-Gl-XrY"/>
                                 <exclude reference="lZM-J1-Cq6"/>
+                                <exclude reference="Zcv-wX-Rye"/>
+                                <exclude reference="aZ8-vo-l10"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="NiP-SD-4zF"/>
                                 <include reference="P2S-Dh-Ker"/>
+                                <include reference="PNH-aC-PTV"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Ktr-8p-ToX"/>
                                 <include reference="QDT-8L-Xx6"/>
                                 <include reference="ec3-Gl-XrY"/>
                                 <include reference="lZM-J1-Cq6"/>
+                                <include reference="Zcv-wX-Rye"/>
+                                <include reference="aZ8-vo-l10"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingInProgress" destination="P2S-Dh-Ker" id="Bvb-tG-baK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,5 +100,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="stop" width="50" height="50"/>
     </resources>
 </document>
