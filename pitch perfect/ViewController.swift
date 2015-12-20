@@ -12,6 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var recordingInProgress: UILabel!
     
+    
+    @IBOutlet weak var stopButton: UIButton!
+    
+    
+    @IBOutlet weak var recordButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,11 +32,20 @@ class ViewController: UIViewController {
     @IBAction func recordAudio(sender: UIButton) {
         //TODO: Show test "Recording in progress"
         recordingInProgress.hidden = false;
+        stopButton.hidden = false;
+        recordButton.hidden = true;
         //TODO: Record audio
         print("Recording");
     }
+    
+    
+    
     @IBAction func stopButton(sender: UIButton) {
         recordingInProgress.hidden = true;
+        recordButton.hidden = false;
+        stopButton.hidden = true;
     }
+    
+    
 }
 
