@@ -51,7 +51,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.48292025862068966" green="0.90759698275862055" blue="0.85347521551724137" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="NiP-SD-4zF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ktr-8p-ToX"/>
                             <constraint firstItem="NiP-SD-4zF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QDT-8L-Xx6"/>
@@ -141,12 +141,32 @@
                                     <action selector="stop:" destination="Trg-t5-h6R" eventType="touchUpInside" id="k1e-U3-Pey"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-MR-Cok">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="chipmunk"/>
+                                <connections>
+                                    <action selector="chipmunk:" destination="Trg-t5-h6R" eventType="touchUpInside" id="s3D-dv-8et"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmf-yi-8Rj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="darthvader"/>
+                                <connections>
+                                    <action selector="darthvader:" destination="Trg-t5-h6R" eventType="touchUpInside" id="04h-Zb-7xJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.52114762931034486" green="0.91530172413793098" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Q0A-G1-kpW" secondAttribute="trailing" constant="12" id="5mj-fY-E1V"/>
+                            <constraint firstItem="Cya-MR-Cok" firstAttribute="leading" secondItem="aY5-th-EE8" secondAttribute="leadingMargin" constant="12" id="D6h-q2-2PJ"/>
+                            <constraint firstItem="Cya-MR-Cok" firstAttribute="top" secondItem="aV6-BL-IiI" secondAttribute="bottom" constant="90" id="SGH-CT-CLM"/>
+                            <constraint firstItem="xmf-yi-8Rj" firstAttribute="top" secondItem="Q0A-G1-kpW" secondAttribute="bottom" constant="90" id="ZXV-tO-Cnx"/>
                             <constraint firstItem="Q71-XJ-6oB" firstAttribute="centerX" secondItem="aY5-th-EE8" secondAttribute="centerX" id="dbE-wd-bNG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xmf-yi-8Rj" secondAttribute="trailing" constant="12" id="fsS-oi-j1P"/>
                             <constraint firstItem="Q0A-G1-kpW" firstAttribute="top" secondItem="gBk-Kj-XtD" secondAttribute="bottom" constant="44" id="iYp-zB-Pil"/>
                             <constraint firstItem="aV6-BL-IiI" firstAttribute="top" secondItem="gBk-Kj-XtD" secondAttribute="bottom" constant="44" id="jq7-v5-mM7"/>
                             <constraint firstItem="Q71-XJ-6oB" firstAttribute="top" secondItem="gBk-Kj-XtD" secondAttribute="bottom" constant="433" id="sHf-2R-woS"/>
@@ -157,12 +177,18 @@
                                 <exclude reference="aV6-BL-IiI"/>
                                 <exclude reference="Q0A-G1-kpW"/>
                                 <exclude reference="Q71-XJ-6oB"/>
+                                <exclude reference="Cya-MR-Cok"/>
+                                <exclude reference="xmf-yi-8Rj"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="jq7-v5-mM7"/>
                                 <exclude reference="uxg-nr-3yT"/>
                                 <exclude reference="5mj-fY-E1V"/>
                                 <exclude reference="iYp-zB-Pil"/>
+                                <exclude reference="D6h-q2-2PJ"/>
+                                <exclude reference="SGH-CT-CLM"/>
+                                <exclude reference="ZXV-tO-Cnx"/>
+                                <exclude reference="fsS-oi-j1P"/>
                                 <exclude reference="dbE-wd-bNG"/>
                                 <exclude reference="sHf-2R-woS"/>
                             </mask>
@@ -172,12 +198,18 @@
                                 <include reference="aV6-BL-IiI"/>
                                 <include reference="Q0A-G1-kpW"/>
                                 <include reference="Q71-XJ-6oB"/>
+                                <include reference="Cya-MR-Cok"/>
+                                <include reference="xmf-yi-8Rj"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="jq7-v5-mM7"/>
                                 <include reference="uxg-nr-3yT"/>
                                 <include reference="5mj-fY-E1V"/>
                                 <include reference="iYp-zB-Pil"/>
+                                <include reference="D6h-q2-2PJ"/>
+                                <include reference="SGH-CT-CLM"/>
+                                <include reference="ZXV-tO-Cnx"/>
+                                <include reference="fsS-oi-j1P"/>
                                 <include reference="dbE-wd-bNG"/>
                                 <include reference="sHf-2R-woS"/>
                             </mask>
@@ -209,6 +241,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="rabit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>
