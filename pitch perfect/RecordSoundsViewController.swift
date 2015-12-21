@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RecordSoundsViewController: UIViewController {
 
+    var audioRecorder:AVAudioRecorder!
+    
     @IBOutlet weak var recordingInProgress: UILabel!
     
     
@@ -36,6 +39,24 @@ class RecordSoundsViewController: UIViewController {
         recordButton.hidden = true;
         //TODO: Record audio
         print("Recording");
+        
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        
+        let recordingName = "my_audio.wav"
+        let pathArray = [dirPath, recordingName]
+        let filePath = NSURL.fileURLWithPathComponents(pathArray)
+        print(filePath)
+        
+        let session = AVAudioSession.sharedInstance()
+        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        
+        try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
+        audioRecorder.meteringEnabled = true
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
+
+        
+        
     }
     
     
@@ -44,6 +65,10 @@ class RecordSoundsViewController: UIViewController {
         recordingInProgress.hidden = true;
         recordButton.hidden = false;
         stopButton.hidden = true;
+        
+        audioRecorder.stop()
+        let audioSession = AVAudioSession.sharedInstance()
+        try! audioSession.setActive(false)
     }
     
     
